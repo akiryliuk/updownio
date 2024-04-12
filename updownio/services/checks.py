@@ -28,7 +28,7 @@ class UpDownIoChecks(UpDownIoServiceBase):
         if not isinstance(disabled_locations, (list, tuple)):
             return r
 
-        for x in enumerate(disabled_locations):
+        for i, x in enumerate(disabled_locations):
             if isinstance(x, str):
                 r.append(('disabled_locations[]', x))
 
@@ -41,7 +41,7 @@ class UpDownIoChecks(UpDownIoServiceBase):
         if not isinstance(recipients, (list, tuple)):
             return r
 
-        for x in enumerate(recipients):
+        for i, x in enumerate(recipients):
             if isinstance(x, str):
                 r.append(('recipients[]', x))
 
